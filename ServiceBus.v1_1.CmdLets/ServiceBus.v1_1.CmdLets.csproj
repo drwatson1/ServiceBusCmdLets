@@ -44,8 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ServiceBusConnection.cs" />
+    <Compile Include="GetServiceBusSubscriptions.cs" />
     <Compile Include="GetServiceBusTopics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NewServiceBusConnection.cs" />
+    <Compile Include="ServiceBusObjectBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="paket.references" />
