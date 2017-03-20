@@ -2,7 +2,7 @@
 
 namespace ServiceBus.v1_1.CmdLets
 {
-    enum ParametersSet
+    internal enum ParametersSet
     {
         CustomConnectionString,
         ConstructConnectionString

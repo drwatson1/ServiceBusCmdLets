@@ -1,11 +1,10 @@
 ﻿using Microsoft.ServiceBus;
 using System.Management.Automation;
-using System.Linq;
 
 namespace ServiceBus.v1_1.CmdLets
 {
     [Cmdlet(VerbsCommon.Get, "ServiceBusTopics")]
-    public class GetServiceBusTopics: ServiceBusObjectBase
+    public class GetServiceBusTopics : ServiceBusObjectBase
     {
         protected override void EndProcessing()
         {

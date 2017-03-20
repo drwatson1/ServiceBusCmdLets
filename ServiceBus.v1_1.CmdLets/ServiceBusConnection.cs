@@ -1,6 +1,4 @@
-﻿using System.Management.Automation;
-
-namespace ServiceBus.v1_1.CmdLets
+﻿namespace ServiceBus.v1_1.CmdLets
 {
     public class ServiceBusConnection
     {
