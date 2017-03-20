@@ -26,7 +26,9 @@ $connection = New-ServiceBusConnection -ConnectionString "connection string"
 
 4. Get all topics. This returns IEnumerable of [TopicDescription](https://docs.microsoft.com/en-us/dotnet/api/microsoft.servicebus.messaging.topicdescription)
 
+```powershell
 $topics = Get-ServiceBusTopics $connection
+```
 
 5. Use topics somehow:
 
@@ -46,3 +48,23 @@ $topics | sort $_path | % {
 }
 ```
 
+This code will generate something like this:
+
+```
+mvk-dev/wellsservice/bypasspipechanged
+    WellsService-9f91d24: 0 (0)
+    SyncService-b7b7db9-BypassMapSymantic: 5 (0)
+mvk-dev/wellsservice/bypassmeasurementchanged
+    WellsService-9f91d24: 8 (0)
+    SyncService-b7b7db9-BypassMapSymantic: 0 (15)
+mvk-dev/regulatorzonecalculated
+    SyncService-b7b7db9: 0 (0)
+mvk-dev/pumpsumpservice/pumpsumpchanged
+    SyncService-b7b7db9-PumpSegmentMapSymantic: 0 (0)
+    SyncService-b7b7db9-PumpSumpMapSymantic: 4 (0)
+    SyncService-b7b7db9-SumpDistrictMapSymantic: 0 (0)
+    SyncService-b7b7db9-PumpPointMapSymantic: 1 (0)
+    NTObjectChangeListener-f158ad0: 0 (8)
+    PumpSumpService-4370260: 0 (0)
+    STObjectChangeListener-c6af841: 3 (0)
+```
